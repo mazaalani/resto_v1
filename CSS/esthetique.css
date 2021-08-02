@@ -1,0 +1,129 @@
+:root {
+  /*Palette de couleurs */
+  --clr-contain: #5D707F;
+  --clr-containSec: #6D8A96;
+  --clr-link: #78BC61;
+  --clr-bg: #ffffff;
+  --clr-bgSec: #0c0c0c;
+  /*polices */
+  --ff-title: 'Rubik', sans-serif;
+  --ff-txt: 'Nunito Sans', sans-serif;
+}
+
+/*---- Général ------------------------------------*/
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-title);
+}
+
+p,
+a,
+form {
+  font-family: var(--ff-txt);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+  opacity: 80%;
+}
+
+/* ---- Main --------------------------------------*/
+
+main {
+  background-color: var(--clr-bg);
+}
+
+/*---- Navigation ---------------------------------*/
+
+header>nav {
+  background-color: var(--clr-bg);
+  text-decoration: none;
+}
+
+.menu a {
+  color: var(--clr-bgSec);
+  font-weight: 700;
+}
+
+.menu a:hover {
+  background-color: var(--clr-link);
+  color: var(--clr-bg);
+}
+
+.dropdown-content {
+  background-color: var(--clr-bg);
+}
+
+/*---- Hero ----------------------------------------*/
+
+header > figure > div {
+  color: var(--clr-bg);
+}
+
+/*---- section ----------------------------------------*/
+
+.flex-2thrd.contact-box {
+  background-color: var(--clr-contain);
+}
+
+.flex-1thrd.contact-box {
+  background-color: var(--clr-containSec);
+}
+
+section h3, section p {
+  color: var(--clr-bgSec);
+}
+
+.contact h3, .contact p {
+  color: var(--clr-bg);
+}
+
+/*---- Link-box -----------------------------------------*/
+
+.link-box:active {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*---- boutons ------------------------------------------*/
+
+.btn {
+  border: 1px var(--clr-bg) solid;
+  background-color: transparent;
+  color: var(--clr-bg);
+}
+
+.btn:hover {
+  background-color: var(--clr-link);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn:active {
+  text-decoration: none;
+  opacity: 80%;
+}
+
+/*---- Footer --------------------------------------------*/
+
+footer {
+  background-color: var(--clr-bgSec);
+  color: white;
+}
+
+footer a {
+  color: var(--clr-bg);
+}
+
+footer a:hover {
+  color: var(--clr-link);
+}

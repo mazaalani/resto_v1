@@ -1,0 +1,36 @@
+:root {
+  /*rythmes*/
+  /* Rythme de base (gouttière normale) */
+  --rythm-s: 1.65rem;
+  /* Rythme élargi (gouttière large) */
+  --rythm-m: 2.5rem;
+  /* Rythme espacé */
+  --rythm-l: 5rem;
+  /* Rythme trés espacé */
+  --rythm-xl: 10rem;
+  /* Rythme marges adaptives */
+  --marg-resp-s: calc(var(--rythm-m) + 2.2vw);
+  --marg-resp-m: calc(var(--rythm-l) + 2.5vw);
+}
+.footer-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.logo-Footer {
+  justify-content: center;
+}
+.logo-Footer img {
+  width: var(--marg-resp-m);
+  object-fit: contain;
+}
+footer li {
+  list-style-type: none;
+}
+footer > div {
+  padding: var(--rythm-s) var(--rythm-l);
+}
+footer .flex-2thrd {
+  margin-top: 0;
+}

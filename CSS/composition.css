@@ -1,0 +1,84 @@
+:root {
+  /* Rythme de base (gouttière normale) */
+  --rythm-s: 1.65rem;
+  --rythm-s-neg: -1.65rem;
+  /* Rythme élargi (gouttière large) */
+  --rythm-m: 2.5rem;
+  --rythm-m-neg: -2.5rem;
+  /* Rythme espacé */
+  --rythm-l: 5rem;
+  --rythm-l-neg: -5rem;
+  /* Rythme trés espacé */
+  --rythm-xl: 10rem;
+  /* Rythme marges adaptives */
+  --marg-resp-s: calc(var(--rythm-m) + 2.2vw);
+  --marg-resp-m: calc(var(--rythm-l) + 2.5vw);
+}
+
+section {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: var(--marg-resp-m);
+}
+section > h2 {
+  margin-bottom: var(--marg-resp-s);
+}
+footer {
+  margin-top: var(--marg-resp-m);
+}
+.promotion p {
+  margin: calc(var(--marg-resp-s) / 3) 0;
+}
+.promotion .flex-1thrd h2 {
+  margin-bottom: calc(var(--marg-resp-s) / 2);
+}
+/* carte promotion comprenant texte/titre et image */
+.card-promotion {
+  display: flex;
+  flex-direction: column;
+}
+.card-promotion .img-box {
+  height: max(100%, 80vmin);
+  margin-top: auto;
+}
+.card-promotion .img-box img {
+  object-fit: cover;
+  height: 100%;
+}
+/* diviseur de section visible */
+.border-top {
+  border-top: solid rgba(0, 0, 0, 0.1) 2px;
+  padding-top: var(--rythm-s);
+}
+.center-txt {
+  text-align: center;
+}
+/* divisions contenant un lien ou bouton pour interaction */
+.contact-box {
+  padding: var(--rythm-m);
+  min-width: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-box div > * + * {
+  margin: calc(var(--marg-resp-s) / 3);
+}
+.contact-box form > * + * {
+  margin: 10px;
+}
+.contact-box > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ajustement distance h3 images */
+.restaurant h3 {
+  line-height: calc(var(--marg-resp-s) / 2);
+}
+/*ajustements d'après recommendations prof : limiter la hauteur ne régle pas le probleme une media querry est necessaire dans ce cas ci*/
+@media all and (max-width: 1414px) {
+  .border-top .flex-6rows > * {
+    flex-basis: calc((100% / 4) - var(--rythm-s));
+  }
+}

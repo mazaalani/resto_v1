@@ -1,0 +1,87 @@
+:root {
+  /* Rythme de base (gouttière normale) */
+  --rythm-s: 1.65rem;
+  --rythm-s-neg: -1.65rem;
+  /* Rythme élargi (gouttière large) */
+  --rythm-m: 2.5rem;
+  --rythm-m-neg: -2.5rem;
+  /* Rythme espacé */
+  --rythm-l: 5rem;
+  --rythm-l-neg: -5rem;
+  /* Rythme trés espacé */
+  --rythm-xl: 10rem;
+  /* Rythme marges adaptives */
+  --marg-resp-s: calc(var(--rythm-m) + 2.2vw);
+  --marg-resp-m: calc(var(--rythm-l) + 2.5vw);
+  --marg-resp-s-neg: calc(var(--rythm-m-neg) - 2.2vw);
+  --marg-resp-m-neg: calc(var(--rythm-l-neg) - 2.5vw);
+}
+
+/* grilles  */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: inherit;
+  align-items: inherit;
+  margin-top: var(--marg-resp-s-neg);
+  margin-left: var(--rythm-s-neg);
+  overflow: hidden;
+}
+.flex > * {
+  flex-grow: 1;
+  /* adaptation de la marge entre les cases de la grille */
+  margin-top: var(--marg-resp-s);
+  margin-left: var(--rythm-s);
+}
+.flex img {
+  display: block;
+  min-width: 190px;
+}
+.column {
+  flex-direction: column;
+}
+.flex-2thrd {
+  flex-basis: calc((100% * 2 / 3) - var(--rythm-s));
+}
+.flex-1thrd {
+  flex-basis: calc((100% / 3) - var(--rythm-s));
+}
+.flex-6rows > * {
+  flex-basis: calc((100% / 6) - var(--rythm-s));
+}
+/*boutons et champs de saisie*/
+.btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+}
+#champ_adresse {
+  padding: 6px 6px;
+  border-radius: 6px;
+  border: none;
+}
+/* image cliquable*/
+.img-box {
+  position: relative;
+}
+.link-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-bg);
+  opacity: 0;
+  font-size: calc(18px + 0.8vw);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease-out;
+}
+.link-box:hover,
+.link-box:focus {
+  opacity: 1;
+}

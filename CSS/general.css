@@ -1,0 +1,51 @@
+:root {
+  /*rythmes*/
+  /* Rythme de base (gouttière normale) */
+  --rythm-s: 1.65rem;
+  --rythm-s-neg: -1.65rem;
+  /* Rythme élargi (gouttière large) */
+  --rythm-m: 2.5rem;
+  --rythm-m-neg: -2.5rem;
+  /* Rythme espacé */
+  --rythm-l: 5rem;
+  --rythm-l-neg: -5rem;
+  /* Rythme trés espacé */
+  --rythm-xl: 10rem;
+  /* Rythme marges adaptives */
+  --marg-resp-s: calc(var(--rythm-m) + 2.2vw);
+  --marg-resp-m: calc(var(--rythm-l) + 2.5vw);
+}
+/* Rétablissement des marges ------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+/* Règles génériques ----------------------- */
+h1,
+h2,
+h3 {
+  line-height: calc(var(--marg-resp-s) / 2);
+}
+/* taille polices augmentée dans une péspective d'améliorer l'accessibilité */
+h1 {
+  font-size: calc(20px + 0.8vw);
+}
+h2 {
+  font-size: calc(18px + 0.6vw);
+}
+h3 {
+  font-size: calc(16px + 0.5vw);
+}
+p,
+a,
+form * {
+  line-height: var(--rythm-s);
+  font-size: calc(14px + 0.2vw);
+}
